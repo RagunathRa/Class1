@@ -1,9 +1,101 @@
 
+                      JavaScript - Overview
 
 
 
 
-   <!-- function myfun(a1, a2){
+                     1. What is JavaScript ?
+
+
+JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else.
+
+It is lightweight and most commonly used as a part of web pages, whose implementations allow client-side script to interact with the user and make dynamic pages.
+
+
+It is an interpreted programming language with object-oriented capabilities.
+
+                         
+                     2.Advantages of JavaScript
+                     
+Less server interaction − 
+      You can validate user input before sending the page off to the server. This saves server traffic, which means less load on your server.
+
+Immediate feedback to the visitors − 
+      They don't have to wait for a  page reload to see if they have forgotten to enter something.
+                     
+ Increased interactivity − 
+      You can create interfaces that react when the user hovers over them with a mouse or activates them via the keyboard.
+                     
+Richer interfaces − 
+      You can use JavaScript to include such items as drag-and-drop components and sliders to give a Rich Interface to your site visitors.
+
+
+                   3.Limitations of JavaScript
+
+We cannot treat JavaScript as a full-fledged programming language. It lacks the following important features −
+      
+      Client-side JavaScript does not allow the reading or writing of files. This has been kept for security reason.
+      
+      JavaScript cannot be used for networking applications because there is no such support available.
+      
+      JavaScript doesn't have any multi-threading or multiprocessor capabilities.
+      
+.
+
+
+                   4. Case Sensitivity 
+
+JavaScript is a case-sensitive language.
+
+This means that the language keywords, variables, function names, and any other identifiers must always be typed with a consistent capitalization of letters.
+                   
+ So the identifiers Time and TIME will convey different meanings in JavaScript.
+                   
+ NOTE − Care should be taken while writing variable and function names in JavaScript
+
+ Note − It is a good programming practice to use semicolons.
+
+ <script  type = "text/javascript">
+  <!--
+     // This is a comment. It is similar to comments in C++
+  
+     /*
+     * This is a multi-line comment in JavaScript
+     * It is very similar to comments in C Programming
+     */
+  //-->
+</script>
+
+
+
+      JavaScript Can Change HTML Content
+
+One of  JavaScript HTML methods is getElementById(). 
+
+ex-1
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p id="demo">JavaScript can change HTML content.</p>
+
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+
+</body>
+</html>
+
+HTML Styles (CSS)
+
+
+  
+
+Object
+
+
+ <!-- function myfun(a1, a2){
       console.log( a1+a2) 
       }
       
@@ -40,16 +132,6 @@ console.log(person1.occupation); // Output: Engineer
     function handleCheckboxChange() {
      alert('Checkbox is checked');
     } -->
-
-if(condtion){
-  console.log('hi');
-
-}
-else {
-console.log(helo)
-}
-
-
 
 
 
@@ -231,15 +313,7 @@ switch (day) {
 console.log("Today is " + dayName + "."); -->
 
 
-Ternary Operator
 
-
-The ternary operator is a simplified conditional operator like if / else.
-
-<!-- Syntax: -->
-
-
-condition ? <expression if true> : <expression if false>
 
 
 
@@ -331,6 +405,27 @@ Arrow function:
 
 const arrowFunction = () => "hey!";
 
+const  arrowFunction = (p1 , p2)=> 2 + 3 ;
+
+// function normelFunction(){
+//    return 'hello'
+// }
+// 
+
+// document.getElementById('damo').innerHTML= arrowFunction();
+
+// num = prompt('helo');
+// console.log(num**2)
+
+// let condition = false;
+
+// if(condition){
+//   console.log("koj");
+
+// }
+// else {
+// console.log("ko")
+// }
 
 2.
 array methods
@@ -423,6 +518,25 @@ if (age >= 18) {
     Use the else if statement to specify a new condition if the first condition is false.
           
 
+    // let hrs = 14;
+    // let greeting = (hrs >=0 && hrs<=13)? 'GM':
+    //                 (hrs >=13 && hrs <= 17)? 'GA':
+    //                 'GN'
+    
+    // console.log(greeting)
+    
+    
+    
+    //  if (hrs >=0 && hrs<=13){
+    //   console.log('GOOD MRNG')
+    //  }
+    //  else if(hrs >=13 && hrs <= 17){
+    //   console.log('GOOD AFTER')
+    //  }
+    // else{
+    //   console.log('GOOD NIGHT')
+    // }
+    
 
     Switch
 
@@ -654,6 +768,35 @@ while (cars[i]) {
   i++;
 } -->
 
+              Error Handling
+
+              1.Syntax error 
+              2.Runtime error
+              3.Logical error
+//  try{
+
+  //   num = prompt('Enter a Number')
+  
+  //   if( num === '' ){
+  //     throw 'its equal to string'  
+  //   }
+  
+  //   if(isNaN(num)){
+  //     throw 'does  not valid number'
+  //   }
+  
+  //  console.log(num**2)
+  
+  //  }
+  //  catch (error){
+  
+  //   console.log(error)
+       
+  //  }
+  // finally{
+  //   console.log('bye')
+  // }
+
 
 
 JS break & Continue
@@ -677,6 +820,55 @@ for (let i=0; i<=10; i++){
 Break statement: The break statement is used to jump out of a loop. 
 It can be used to “jump out” of a switch() statement. It breaks the loop
 
+
+
+
+Ternary Operator
+
+
+The ternary operator is a simplified conditional operator like if / else.
+
+<!-- Syntax: -->
+
+
+condition ? <expression if true> : <expression if false>
+
+
+  //   Asynchronous JavaScript
+
+
+  // console.log('hi....');//F1
+  
+  
+  // function fn(){
+  //     console.log('This is step 1')//F3
+  //     console.log('This is step 2')//F4
+  //     console.log('This is step 3')//F5
+  // }
+  // fn()//F2
+  
+  
+  
+  // let a =100;
+  // let b= 200;
+  // let c = 20;
+  
+  // setTimeout(()=> console.log('step1 '), 2000)//F6
+  // setTimeout(()=> console.log('step2 '), 3000)//F7
+  // setTimeout(()=> console.log('step3 '), 1000)//F8
+  
+  
+  // console.log('bye')//F9 
+  
+                    
+  
+             
+Promises
+
+promise.all()
+promise.allSetled()
+promise.any()
+promise.race()
 
 // const  Train = new Promise((resolve,reject) =>{
   //      let Booking = true;
@@ -762,52 +954,87 @@ It can be used to “jump out” of a switch() statement. It breaks the loop
 
 
 
-<!-- 
 
-// const  arrowFunction = (p1 , p2)=> 2 + 3 ;
-
-// function normelFunction(){
-//    return 'hello'
-// }
-// 
-
-// document.getElementById('damo').innerHTML= arrowFunction();
-
-// num = prompt('helo');
-// console.log(num**2)
-
-// let condition = false;
-
-// if(condition){
-//   console.log("koj");
-
-// }
-// else {
-// console.log("ko")
-// }
-
-
-
-
-// if(y <= 2){
-//    alert('u');
-// }
-// else{
-//    alert('crct')
-// } -->
-
-
-
-
-<!-- <p>Click the following to see the result:</p> -->
+  //   Async/await
+  
+  
+  
+  
+  // the async/await pattern is a syntactic feature of 
+  // many programming languages that allows an asynchronous, non-blocking function to be structured in a way similar to an ordinary synchronous function.
+  
+  
+  
+  // The word “async” before a function means one simple thing: a function always returns a promise
+  
+  
+  
+  // let reachC = new Promise((resolve, reject) => {
+          
+  
+  //                 let reached = false;
+                  
+  //                 if( reached){
+  //                  setTimeout(resolve, 3000 , 'santhosh is reached')
+  //                 }
+  //                 else{
+  //                    reject('santhosh not reached')
+  //                 }
+               
+  //              })
+  
+  
+  //                 async  function fn(){
       
-      <!-- <form>
-         <input type = "button" value = "Click Me" onclick = "myFunc();" />
-      </form> -->
+  //                   try{ console.log('helo...')
+  //                   res = await reachC
+  //                   console.log(reachC)
+  //                   console.log('bye')
+  
+  //                 }
+  
+                    
+  //                    catch(err){
+  //                       console.log(err)
+  //                    }
+  
+  //                   }
+  //                   fn()
+    
 
-<!-- 
 
-      <p id="GFG"></p>
+
+
+
+
+
+
+
+
+
+
+
+  // setInterval(()=> console.log('hi'),3000)
+
+ 
+  // spread operator?
+oldarrary type=====   //  let study= JavaScript.concat(newone)
+
+
+  // The JavaScript spread operator ( ... ) allows us to quickly copy all or part of an existing array or object into another array or object.
+  // const JavaScript=['datatypes', 'array', 'functions', 'conditionalstatements', 'arrowfunctions', 'promises','loop','Varibles', '']
+  
+  //     const e6=[ 'spread operator', 'setTimeout','call back', 'async',  ]
+  
+  
+  //    //  let study= JavaScript.concat(e6)
+  
+  
+  //    // let dayonestudy=[JavaScript,e6]
+  //    let dayonestudy=[...JavaScript,...e6]
+  //    //  console.log(study)
+  //     console.log(dayonestudy)
+
   
  
 
@@ -815,59 +1042,12 @@ It can be used to “jump out” of a switch() statement. It breaks the loop
 
 
 
-// window.onerror = function () {
-//                alert("An error occurred.");
-//             }
-  
-
-//  try{
-
-//   num = prompt('Enter a Number')
-
-//   if( num === '' ){
-//     throw 'its equal to string'  
-//   }
-
-//   if(isNaN(num)){
-//     throw 'does  not valid number'
-//   }
-
-//  console.log(num**2)
-
-//  }
-//  catch (error){
-
-//   console.log(error)
-     
-//  }
-// finally{
-//   console.log('bye')
-// }
 
 
 
 
 
 
-
-// let hrs = 14;
-// let greeting = (hrs >=0 && hrs<=13)? 'GM':
-//                 (hrs >=13 && hrs <= 17)? 'GA':
-//                 'GN'
-
-// console.log(greeting)
-
-
-
-//  if (hrs >=0 && hrs<=13){
-//   console.log('GOOD MRNG')
-//  }
-//  else if(hrs >=13 && hrs <= 17){
-//   console.log('GOOD AFTER')
-//  }
-// else{
-//   console.log('GOOD NIGHT')
-// }
 
 
 
@@ -875,30 +1055,3 @@ It can be used to “jump out” of a switch() statement. It breaks the loop
 
   
 
-    //   var content = "";
-    //   var i ;
-    //   for (i = 1; i < 700; i++) {
-    //       if (i === 6) { 
-    //           continue; 
-    //       }
-    //       content += "number is " + i + "<br>";
-    //   }
-    //   document.getElementById("GFG").innerHTML = content;
-//     (function() {
-//     console.log('IIFE');
-// })();
-
-
-// let person = {
-//     firstName: 'John',
-//     lastName: 'Doe'
-// };
-
-// (function () {
-//     console.log(person.firstName+ ' ' + person.lastName);
-// })(person); -->
-
-function fn(){
-  return 2+3
-}
-fn(p1, p2)
