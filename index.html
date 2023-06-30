@@ -1,0 +1,899 @@
+
+
+
+
+
+   <!-- function myfun(a1, a2){
+      console.log( a1+a2) 
+      }
+      
+      myfun(6, 7) -->
+
+    <!-- <script>
+
+function Person(name, age, occupation) {
+  this.name = name;
+  this.age = age;
+  this.occupation = occupation;
+}
+
+// Creating object instances using the constructor function
+let person1 = new Person("John Doe", 25, "Engineer");
+let person2 = new Person("Jane Smith", 30, "Teacher");
+
+// Accessing object properties
+console.log(person1.name); // Output: John Doe  
+console.log(person2.age); // Output: 30
+console.log(person1.occupation); // Output: Engineer
+</script> -->
+
+
+<!-- <title>Checkbox Value Change</title>
+</head>
+<body>
+  <label>
+    <input type="checkbox" id="myCheckbox" onchange="handleCheckboxChange()">
+    Check me
+  </label>
+
+  <script>
+    function handleCheckboxChange() {
+     alert('Checkbox is checked');
+    } -->
+
+if(condtion){
+  console.log('hi');
+
+}
+else {
+console.log(helo)
+}
+
+
+
+
+
+
+======
+<!-- class= 2 -->
+
+{Array}
+
+In JavaScript, an array is a built-in data structure that allows you to store 
+and manipulate multiple values in a single variable.
+It is a container that can hold elements of different types, such as numbers,
+  strings, and  objects.
+
+
+
+<!-- 
+syntex:
+const array_name = [item1, item2, ...];    -->
+
+
+Arrays in JavaScript are zero-indexed, which means the first element is accessed using an index of 0,
+ the second element with an index of 1, and so on. The size of an array can dynamically change as elements are added or removed.
+
+
+
+
+
+
+push()
+
+Adds one or more elements to the end of an array and returns the new length of the array.
+
+<!-- let fruits = ['apple', 'banana', 'orange'];
+fruits.push('mango');
+console.log(fruits); // Output: ['apple', 'banana', 'orange', 'mango'] -->
+
+pop()
+
+Removes the last element from an array and returns that element.
+
+<!-- let fruits = ['apple', 'banana', 'orange'];
+let removedFruit = fruits.pop();
+console.log(removedFruit); // Output: 'orange'
+console.log(fruits); // Output: ['apple', 'banana'] -->
+
+
+
+
+shift()
+
+Removes the first element from an array and returns that element.
+
+<!-- let fruits = ['apple', 'banana', 'orange'];
+let removedFruit = fruits.shift();
+console.log(removedFruit); // Output: 'apple'
+console.log(fruits); // Output: ['banana', 'orange'] -->
+
+
+unshift(): Adds one or more elements to the beginning of an array and returns the new length of the array.
+
+<!-- let fruits = ['banana', 'orange'];
+fruits.unshift('apple', 'mango');
+console.log(fruits); // Output: ['apple', 'mango', 'banana', 'orange'] -->
+
+
+join(): Joins all elements of an array into a string, separated by the specified separator.
+
+<!-- let fruits = ['apple', 'banana', 'orange'];
+let fruitString = fruits.join(',    ');
+console.log(fruitString); // Output: 'apple, banana, orange' -->
+
+
+indexOf(): Returns the first index at which a specified element is found in an array, or -1 if not found.
+
+<!-- let fruits = ['apple', 'banana', 'orange'];
+let orangeIndex = fruits.indexOf('orange');
+console.log(orangeIndex); // Output: 2 -->
+
+
+slice()
+
+   where start and end represent the index of items in that array.
+<!-- 
+let fruits = ['apple', 'banana', 'orange', 'mango', 'kiwi'];
+let slicedFruits = fruits.slice(1, 4);
+console.log(slicedFruits); // Output: ['banana', 'orange', 'mango'] -->
+
+splice(): Changes the content of an array by removing  elements at a specified index.
+
+<!-- let fruits = ['apple', 'banana', 'orange'];
+// Removing elements
+let removedFruits = fruits.splice(1, 2);
+console.log(removedFruits); // Output: ['banana', 'orange']
+console.log(fruits); // Output: ['apple'] -->
+
+sort(): Sorts the elements of an array in place and returns the sorted array.
+
+
+<!-- let numbers = [4, 2, 7, 1, 5];
+numbers.sort();
+console.log(numbers); // Output: [1, 2, 4, 5, 7]
+
+let words = ['apple', 'banana', 'kiwi', 'orange'];
+words.sort();
+console.log(words); // Output: ['apple', 'banana', 'kiwi', 'orange'] -->
+
+
+concat()
+
+The concat() method is used to merge two or more arrays and returns a new array containing the merged elements
+
+<!-- let fruits1 = ['apple', 'banana'];
+let fruits2 = ['orange', 'mango'];
+let fruits3 = ['kiwi'];
+
+let mergedFruits = fruits1.concat(fruits2, fruits3);
+console.log(mergedFruits);
+// Output: ['apple', 'banana', 'orange', 'mango', 'kiwi'] -->
+
+
+
+
+<!-- // Normal function
+// function traditionalFunction() {
+//   return "Hello World!";
+// }
+
+
+// const arrowFunction = () => "World!";
+
+
+// document.getElementById('hi').innerHTML= arrowFunction ();
+
+// document.getElementById('helo').innerHTML= traditionalFunction(); -->
+
+
+
+<!-- let hour= new Date().getHours();
+
+
+let greeting = (hour >= 0 && hour <= 13) ? 'GM' :
+               (hour >= 13 && hour <= 17) ? 'gf' :
+               'gn';
+
+console.log(greeting); -->
+  
+
+<!-- var day = new Date().getDay();
+var dayName;
+
+switch (day) {
+  case 0:
+    dayName = "Sunday";
+    break;
+  case 1:
+    dayName = "Monday";
+    break;
+  case 2:
+    dayName = "Tuesday";
+    break;
+  case 3:
+    dayName = "Wednesday";
+    break;
+  case 4:
+    dayName = "Thursday";
+    break;
+  case 5:
+    dayName = "Friday";
+    break;
+  case 6:
+    dayName = "Saturday";
+    break;
+  default:
+    dayName = "Unknown";
+    break;
+}
+
+console.log("Today is " + dayName + "."); -->
+
+
+Ternary Operator
+
+
+The ternary operator is a simplified conditional operator like if / else.
+
+<!-- Syntax: -->
+
+
+condition ? <expression if true> : <expression if false>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function method
+
+1.parseInt()
+
+            The parseInt() method in JavaScript is used to parse a string and convert it into an integer. 
+   ex-1
+      <!-- let num ='78';
+      let Number =parseInt(num)
+      console.log(Number) -->
+  ex-2
+
+          the parseInt() method is used to convert the floating-point string "3.14" to the integer 3 (remove the decimal point.)
+
+        <!-- let floatingPointString = "3.14";
+        let parsedNumber = parseInt(floatingPointString);
+        console.log(parsedNumber); // Output: 3 -->
+  
+2.Number()
+
+
+      ex-1
+          <!-- let str = "1.89";
+          let num = Number(str);
+          console.log(num); // Output: 1.89
+          console.log(typeof num); // Output: "number" -->
+        
+      ex-2
+
+          <!-- let str = "42 is the answer";
+
+          console.log(Number(str)); // Output: NaN
+          console.log(parseInt(str)); // Output: 42
+          
+          let decimalStr = "3.14";
+          
+          console.log(Number(decimalStr)); // Output: 3.14
+          console.log(parseInt(decimalStr)); // Output: 3
+          
+          let nonNumericStr = "Hello";
+          
+          console.log(Number(nonNumericStr)); // Output: NaN
+          console.log(parseInt(nonNumericStr)); // Output: NaN
+          
+          let bool = true;
+          
+          console.log(Number(bool)); // Output: 1
+          console.log(parseInt(bool)); // Output: NaN -->
+
+        
+Class 3
+
+Arrow function:
+
+ Arrow functions were introduced in ES6.
+
+ 1.Arrow functions are shorter and more concise, 
+ 2. They use the => symbol instead of the function keyword, and they don't need curly braces
+
+ <!-- 
+  syntax of arrow 
+   let myFun = (a1, b1) => a1 * b1; -->
+
+   syntax of normel function
+   <!-- function name(parameter1, parameter2, parameter3) {
+    // code to be executed
+  } -->
+
+
+
+
+
+const arrowFunction = () => "hey!";
+
+
+2.
+array methods
+
+
+
+
+map()   
+
+  it's  defind to creates a new array by applying a
+ given function to each element of the original array. 
+ It performs a transformation or mapping operation on each element and returns a new array with the transformed values
+
+1.
+<!-- const strings = ["Hello", "World", "Bard"];
+const newArr = strings.map((str) => {
+  return str.toUpperCase();
+});
+
+console.log(newArr); // ["HELLO", "WORLD", "BARD"] -->
+
+
+
+2.
+<!-- const numbers = [65, 44, 12, 4];
+const newArr = numbers.map((num) => {
+  return num * 2;
+});
+
+console.log(newArr);  -->
+
+
+filter()
+
+<!-- the filter() method is an array method that creates 
+a new array containing elements
+from the original array that pass a certain
+condition defined by a filtering function.  -->
+
+1.
+
+<!-- const ages = [78, 12, 2, 33, 16, 40];
+const result = ages.filter(checkAdult);
+
+function checkAdult(age) {
+  return age >= 18; -->
+}
+
+reverse()
+
+In JavaScript, the reverse() method is an array method that reverses
+ the order of the elements in an array. It modifies the original array 
+ in-place and does not create a new array.
+
+ <!-- const numbers = [1, 2, 3, 4, 5];
+
+ numbers.reverse();
+ 
+ console.log(numbers);  -->
+
+
+
+ 
+ ======
+
+ {Conditional Statements}
+
+ 1. Conditional statements are used to perform different actions based on different conditions.
+
+         1.if/else
+         2.switch
+
+<!-- syntex -->
+ if (condition) {
+  // code to be executed if condition is true
+} else {
+  // code to be executed if condition is false
+}
+
+<!-- var age = 18;
+
+if (age >= 18) {
+  console.log("You are eligible to vote.");
+} else {
+  console.log("You are not eligible to vote yet.");
+} -->
+
+    else if 
+    
+    Use the else if statement to specify a new condition if the first condition is false.
+          
+
+
+    Switch
+
+    The switch statement is used to perform different actions based on different conditions.
+
+    switch (expression) {
+      case value1:
+        // code to be executed when expression matches value1
+        break;
+      case value2:
+        // code to be executed when expression matches value2
+        break;
+      case value3:
+        // code to be executed when expression matches value3
+        break;
+      // more cases can be added as needed
+      default:
+        // code to be executed when expression doesn't match any case
+        break;
+    }
+
+
+
+ex1 
+
+
+    <!-- var day = "Monday";
+var message;
+
+switch (day) {
+  case "Monday":
+    message = "It's the first day of the week.";
+    break;
+  case "Tuesday":
+  case "Wednesday":
+  case "Thursday":
+    message = "It's a weekday.";
+    break;
+  case "Friday":
+    message = "It's finally Friday!";
+    break;
+  case "Saturday":
+  case "Sunday":
+    message = "It's the weekend.";
+    break;
+  default:
+    message = "Invalid day.";
+    break;
+}
+
+console.log(message); -->
+
+
+
+
+<!-- JavaScript Loops -->
+
+Loops can execute a block of code a number of times.
+Loops are handy, if you want to run the same code over and over again, each time with a different value.
+
+
+There are four types of loops in JavaScript.
+
+for loop
+while loop
+do-while loop
+for-in loop
+
+<!-- JavaScript For Loop -->
+
+
+
+
+The JavaScript for loop iterates the elements for the fixed number of times. It should be used if number of iteration is known
+
+<!-- syntex -->
+for (initialization; condition; increment)  
+{  
+    code to be executed  
+}  
+
+ex 1
+
+
+for (i=0; i<=7; i++)  
+{  
+document.write(i + "<br/>")  
+}  
+
+
+ex-2 
+
+
+let text = "";
+
+for (let i = 1  ; i < 16; i++) {
+  text += "The number is " + i + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+
+ex-3
+
+const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+let text = "";
+for (let i = 0; i < cars.length; i++) {
+  text += cars[i] + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+
+
+<!-- If expression 2 returns true, the loop will start over again. If it returns false, the loop will end. -->
+
+
+
+<!-- The For In Loop -->
+
+The JavaScript for in statement loops through the properties of an Object:
+
+
+<!-- for (key in object) {
+  // code block to be executed
+} -->
+const person = {fname:"John", lname:"Doe", age:25}; 
+
+let txt = "";
+for (let x in person) {
+  txt += person[x] ;
+}
+
+document.getElementById("demo").innerHTML = txt;
+
+<!-- JavaScript while loop -->
+
+
+
+
+The while loop loops through a block of code as long as a specified condition is true.
+
+<!-- Syntax
+while (condition) {
+  // code block to be executed
+} -->
+
+
+
+ex-1 
+
+var i=11;  
+while (i<=15)  
+{  
+document.write(i + "<br/>");  
+i++;  
+}  
+
+
+
+
+
+<!-- The Do While Loop -->
+
+The do while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+
+
+
+<!-- syntex -->
+do{  
+  code to be executed  
+}while (condition); 
+
+
+ex-1
+
+
+let text = ""
+let i = 0;
+
+do {
+  text += "<br>The number is " + i;
+  i++;
+}
+while (i < 10);  
+
+
+ex-2
+
+
+var i=21;  
+do{  
+document.write(i + "<br/>");  
+i++;  
+}while (i<=25); 
+
+
+
+
+Comparing For and While
+
+
+If you have read the previous chapter, about the for loop, you will discover that a while loop is much the same as a for loop, with statement 1 and statement 3 omitted.
+
+
+<!-- FOR -->                                                    
+                                                          
+
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
+
+let i = 0;
+let text = "";
+for (;cars[i];) {
+  text += cars[i] + "<br>";
+  i++;
+}
+
+
+
+
+<!-- while loop -->
+
+<!-- 
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
+let i = 0;
+let text = "";
+
+while (cars[i]) {  
+  text += cars[i];
+  i++;
+} -->
+
+
+
+JS break & Continue
+
+
+
+
+Continue statement: The continue statement “jumps over” one iteration in the loop. It breaks iteration in the loop and continues executing the next iteration in the loop.
+
+
+
+for (let i=0; i<=10; i++){        
+
+  if(i === 5 ){
+    Continue;
+  }
+} document.write(i)
+
+
+
+Break statement: The break statement is used to jump out of a loop. 
+It can be used to “jump out” of a switch() statement. It breaks the loop
+
+
+// const  Train = new Promise((resolve,reject) =>{
+  //      let Booking = true;
+  //      if(Booking){
+  //         resolve()
+  //      }
+  //      else{
+  //         reject()
+  //      }
+  // })
+  
+  //    Train.then(sucess).catch(failure)
+  
+  //    function sucess(){
+  //     console.log('Thanks for booking ');
+  //    }
+  //    function failure(){
+  //     console.log('Better lock Next tym');
+  //    }
+  
+  
+  // function  Train (){
+  //  return new Promise((resolve,reject) =>{
+  //      let Booking = true;
+  //      if(Booking){
+  //         resolve()
+  //      }
+  //      else{
+  //         reject()
+  //      }
+  // })}
+  
+  //    Train().then(sucess).catch(failure)
+  
+  //    function sucess(){
+  //     console.log('Thanks for booking ');
+  //    }
+  //    function failure(){
+  //     console.log('Better lock Next tym');
+  //    }
+  
+  
+  //    function  Train (){
+  //  return new Promise((resolve,reject) =>{
+  //      let Booking = true;
+  //      if(Booking){
+  //         resolve(250)
+  //      }
+  //      else{
+  //         reject()
+  //      }
+  // })}
+  
+  //    Train().then((amt)=>console.log(`Thanks for booking, Your amt is ₹ ${(amt)}`))
+  //    .catch(()=> console.log('Better lock Next tym'))
+  
+    
+  // Method2
+  
+  // let reachA = new Promise((resolve, reject) => {
+  //         let reached=true;
+  //         reached ? setTimeout(resolve, 4000, 'Sathosh Reached'): reject('Not Reached')
+  // })
+  // reachA.then((message)=> console.log(message))
+  // .catch((message)=> console.log(message))
+  
+  
+  // let reachB = new Promise((resolve, reject) => {
+  //         let reached=true;
+  //         reached ? setTimeout(resolve, 1000, 'Kumar Reached'): reject('h Not Reached')
+  // })
+  // let reachC = new Promise((resolve, reject) => {
+  //         let reached=false;
+  //         reached ? setTimeout(resolve, 3000, 'Raj Reached'): reject('Noot Reached')
+  // })
+  
+  
+  
+  
+  //   Promise.all([ reachA, reachB, reachC])
+  //   .then((message)=> console.log(message))
+  // .catch((message)=> console.log(message))
+
+
+
+<!-- 
+
+// const  arrowFunction = (p1 , p2)=> 2 + 3 ;
+
+// function normelFunction(){
+//    return 'hello'
+// }
+// 
+
+// document.getElementById('damo').innerHTML= arrowFunction();
+
+// num = prompt('helo');
+// console.log(num**2)
+
+// let condition = false;
+
+// if(condition){
+//   console.log("koj");
+
+// }
+// else {
+// console.log("ko")
+// }
+
+
+
+
+// if(y <= 2){
+//    alert('u');
+// }
+// else{
+//    alert('crct')
+// } -->
+
+
+
+
+<!-- <p>Click the following to see the result:</p> -->
+      
+      <!-- <form>
+         <input type = "button" value = "Click Me" onclick = "myFunc();" />
+      </form> -->
+
+<!-- 
+
+      <p id="GFG"></p>
+  
+ 
+
+      
+
+
+
+// window.onerror = function () {
+//                alert("An error occurred.");
+//             }
+  
+
+//  try{
+
+//   num = prompt('Enter a Number')
+
+//   if( num === '' ){
+//     throw 'its equal to string'  
+//   }
+
+//   if(isNaN(num)){
+//     throw 'does  not valid number'
+//   }
+
+//  console.log(num**2)
+
+//  }
+//  catch (error){
+
+//   console.log(error)
+     
+//  }
+// finally{
+//   console.log('bye')
+// }
+
+
+
+
+
+
+
+// let hrs = 14;
+// let greeting = (hrs >=0 && hrs<=13)? 'GM':
+//                 (hrs >=13 && hrs <= 17)? 'GA':
+//                 'GN'
+
+// console.log(greeting)
+
+
+
+//  if (hrs >=0 && hrs<=13){
+//   console.log('GOOD MRNG')
+//  }
+//  else if(hrs >=13 && hrs <= 17){
+//   console.log('GOOD AFTER')
+//  }
+// else{
+//   console.log('GOOD NIGHT')
+// }
+
+
+
+
+
+  
+
+    //   var content = "";
+    //   var i ;
+    //   for (i = 1; i < 700; i++) {
+    //       if (i === 6) { 
+    //           continue; 
+    //       }
+    //       content += "number is " + i + "<br>";
+    //   }
+    //   document.getElementById("GFG").innerHTML = content;
+//     (function() {
+//     console.log('IIFE');
+// })();
+
+
+// let person = {
+//     firstName: 'John',
+//     lastName: 'Doe'
+// };
+
+// (function () {
+//     console.log(person.firstName+ ' ' + person.lastName);
+// })(person); -->
