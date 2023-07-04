@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JS CreateElement Demo</title>
+</head>
+
+<ul id="menu">
+    <li>Home</li>
+  </ul>
+  <body>
+  <script>
+    // select the ul menu element
+    const menu = document.querySelector('#menu');
+  
+    let li = document.createElement('li');
+    li.textContent = 'Products';
+    menu.appendChild(li);
+  
+    li = document.createElement('li');
+    li.textContent = 'About Us';
+    menu.appendChild(li);
+  </script>
+</body>
+</html>

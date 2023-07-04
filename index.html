@@ -1037,6 +1037,483 @@ oldarrary type=====   //  let study= JavaScript.concat(newone)
 
   
  
+  JavaScript DOM
+
+
+
+
+  1. What is Document Object Model (DOM)
+
+The Document Object Model (DOM) is an application programming interface (API) for manipulating HTML documents.
+
+The DOM represents an HTML document as a tree of nodes. The DOM provides functions that allow you to add, remove, and modify parts of the document effectively.
+
+Note that the DOM is cross-platform and language-independent ways of manipulating HTML and XML documents.    
+
+
+ex-1
+
+<html>
+   <head>
+       <title>JavaScript DOM</title>
+   </head>
+   <body>
+       <p>Hello DOM!</p>
+   </body>
+</html>
+
+
+2.The W3C DOM standard is separated into 3 different parts:
+
+Core DOM - standard model for all document types
+XML DOM - standard model for XML documents
+HTML DOM - standard model for HTML documents
+
+
+
+
+3. What is HTML DOM ? -> programming interface for HTML.
+
+
+The getElementById() Method
+
+The getElementsByTagName() Method
+
+The getElementsByClassName() Method
+
+The querySelector() Method
+
+The querySelectorAll() Method
+
+
+The HTML elements as objects
+
+The properties of all HTML elements
+The methods to access all HTML elements
+The events for all HTML elements
+
+
+4.The getElementById Method
+
+
+The document.getElementById() method returns an Element object that represents an HTML element with an id that matches a specified string.
+
+
+The most common way to access an HTML element is to use the id of the element.
+
+
+
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello World!";
+</script>
+
+</body>
+</html>
+
+5.The innerHTML Property
+
+The innerHTML property is useful for getting or replacing the content of HTML elements.
+
+
+6.Changing the Value of an Attribute
+
+
+
+JavaScript changes the src attribute of that element from 
+"jk.png" to "pk1.png"
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<img id='rom' src="jk.png">
+
+<script>
+document.getElementById("rom").src = "pk1.png";
+</script>
+
+</body>
+</html>
+
+
+
+JavaScript getElementsByName
+
+Every element on an HTML document may have a name attribute:
+
+<input type="radio" name="language" value="JavaScript">
+
+let elements = document.getElementsByName(name);
+
+
+The getElementsByName() method returns a collection of elements with a specified name.
+
+ex -1
+
+<form>
+ <input type="text" name="username">
+ <input type="password" name="password">
+ <input type="submit" value="Submit">
+</form>
+
+<script>
+ var inputs = document.getElementsByName("username");
+ console.log(inputs); // Returns a collection of input elements with the name "username"
+</script>
+
+
+
+The getElementsByTagName() method returns a collection of all elements with a specified tag name.
+
+The getElementsByTagName() property is read-only.
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Document Object</h1>
+<h2>The getElementsByTagName() Method</h2>
+
+<p>An unordered list:</p>
+<ul>
+ <li>Coffee</li>
+ <li>Tea</li>
+ <li>Milk</li>
+</ul>
+
+<p>The tag name of all elements:</p>
+<p id="demo"></p>
+
+<script>
+const collection = document.getElementsByTagName("*");
+let text = "";
+for (let i = 0; i < collection.length; i++) {
+ text += collection[i].tagName + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+
+
+
+<!-- 
+   <form>
+       <input type="radio" name="gender" value="male"> Male
+       <input type="radio" name="gender" value="female"> Female
+       <input type="radio" name="gender" value="other"> Other
+     </form>
+     
+     <script>
+       var genderRadios = document.getElementsByName("gender");
+       console.log(genderRadios); 
+     </script>
+     <form>
+       <select name="country">
+         <option value="us">United States</option>
+         <option value="ca">Canada</option>
+         <option value="uk">United Kingdom</option>
+       </select>
+     </form>
+     
+     <script>
+       var countrySelects = document.getElementsByName("country");
+       console.log(countrySelects); // Returns a collection of select elements with the name "country"
+     </script> -->
+<!-- 
+<h1>The Document Object</h1>
+<h2>The getElementsByTagName() Method</h2>
+
+<p>A set of paragraphs:</p>
+<p>This is the first paragraph.</p>
+<p>This is the second paragraph.</p>
+<p>This is the third paragraph.</p>
+
+<script>
+const paragraphs = document.getElementsByTagName("p");
+
+// Loop through the collection of <p> elements and apply some styling
+for (let i = 0; i < paragraphs.length; i++) {
+
+
+ 
+ paragraphs[i].style.color = "blue";
+ paragraphs[i].style.fontWeight = "bold";
+} -->
+
+
+
+<!-- <div class='container1'>
+ <div class='box'>container one and box one</div>
+ </div>
+ <div class='container2'>hghghjgvvb
+ <div class='box'>container two and box two</div>
+ </div> -->
+<script>
+//  const container2 = document.querySelector('.container2')
+//   const result = container2.querySelector('.box')
+//   console.log(result)
+
+// let div = document.createElement('div');
+//         div.id = 'content';
+//         div.innerHTML = '<p>CreateElement example1</p>';
+//         document.body.appendChild(div);
+
+
+
+
+
+
+
+
+// getElementsByClassName()
+
+// The getElementsByClassName() method returns a collection of elements with a specified class name(s).
+
+
+// </body>
+// </html>
+// <p>Change the text of the first element with class="example":</p>
+
+// <div class="example">Element1</div>
+// <div class="example">Element2</div>
+
+// <script>
+// const collection = document.getElementsByClassName("example");
+// collection[0].innerHTML = "Hello World!";
+
+
+
+//    </body>
+//    </html>
+// </body>
+// </html>
+
+
+
+// The querySelector() Method
+
+
+// The HTML DOM querySelector() method returns the first element that matches a specific CSS selector specified in its parameter in an HTML document.
+
+
+
+// </html>
+// </body>
+// <h2> Hello Denial</h2>
+
+
+// <script>
+// const collection = document.querySelector("h2");
+// console.log(collection)
+// </script> 
+
+
+  
+// </body>
+// </html>
+// 2.
+// <div class='box'>1</div>
+// <div class='box'>2</div>
+// <div class='box'>3</div>
+
+// const collection = document.querySelector(".box");
+// console.log(collection)
+
+// 3. <h2>reject</h2>
+// <h2>resolve</h2>
+// <h2>Promise</h2>
+// const collection = document.querySelector("h2");
+// console.log(collection)
+
+// 4.
+
+// <div class='container1'>
+// <div class='box'>container one and box one</div>
+// </div>
+// <div class='container2'>
+// <div class='box'>container two and box two</div>
+// </div>
+
+// const container2 = document.quaryselector('.container2')
+// const result = container2.quarySelector('.box')
+// console.log(result)
+
+// 5.
+
+// <body>
+// <h1>DOM querySelector() Method Demo</h1>
+
+// <p class="awesome-para">Hi! I'm a paragraph with some random text.</p>
+// <button onclick="changeColor()" class="btn">Change p styles</button>
+// <script>
+//   function changeColor() {
+//      var paraElement = document.querySelector(".awesome-para");
+//      paraElement.style.color="#db133a";
+//      paraElement.style.fontSize="1.2rem";
+//   }
+// </script>
+
+
+// The querySelectorAll() Method
+
+// The querySelectorAll() method returns all elements from a DOM tree with the same selector.
+
+// <h1>A H1 element</h1>
+// <h2>A H2 element</h2>
+// <h3>A H2 element</h3>
+// <div>A DIV element</div>
+// <p>A p element.</p>
+// <p>A p element with a <span style="color:brown;">span</span> element inside.</p>
+
+// <script>
+// const nodeList = document.querySelectorAll("h3, div, span");
+// for (let i = 0; i < nodeList.length; i++) {
+//  nodeList[i].style.backgroundColor = "red";
+// }
+// </script>
+
+
+
+// MANIPULATING ELEMENTS
+
+// 1.JavaScript CreateElement
+
+// The document.createElement() accepts an HTML tag name and returns a new Node with the Element type.
+
+
+// <!DOCTYPE html>
+// <html>
+// <head>
+//    <meta charset="utf-8">
+//    <title>JS CreateElement Demo</title>
+// </head>
+// <body>
+//    <script>
+//        let div = document.createElement('div');
+//        div.id = 'content';
+//        div.innerHTML = '<p>CreateElement example</p>';
+//        document.body.appendChild(div);
+//    </script>
+// </body>
+// </html>
+
+
+// Creating new list items (li)
+
+// Let’s say you have a list of items:
+
+// <ul id="menu">
+//    <li>Home</li>
+//  </ul>
+ 
+//  <script>
+//    // select the ul menu element
+//    const menu = document.querySelector('#menu');
+ 
+//    let li = document.createElement('li');
+//    li.textContent = 'Products';
+//    menu.appendChild(li);
+ 
+//    li = document.createElement('li');
+//    li.textContent = 'About Us';
+//    menu.appendChild(li);
+//  </script>
+
+
+// 2.JavaScript removeChild
+
+// let childNode = parentNode.removeChild(childNode);
+
+// Then, remove the last element of the ul element by using the removeChild() method. The menu.lastElementChild property returns the last child element of the menu.
+
+
+// <<!DOCTYPE html>
+// <html>
+// <head>
+//    <meta charset="utf-8">
+//    <title>JavaScript removeChild()</title>
+// </head>
+// <body>
+//    <ul id="menu">
+//        <li>Home</li>
+//        <li>Products</li>
+//    </ul>
+//    <script>
+//        let menu = document.getElementById('menu');
+//        menu.removeChild(menu.lastElementChild);
+//    </script>
+// </body>
+// </html>
+
+// ex-2
+
+// <!DOCTYPE html>
+// <html>
+// <head>
+//    <meta charset="utf-8">
+//    <title>JavaScript removeChild()</title>
+// </head>
+// <body>
+//    <ul id="menu">hi</ul>
+//    <ul id="menu">helo</ul>
+//    <ul id="menu">ui</ul>
+//    <script>
+//       let menu = document.getElementById('menu');
+//       while (menu.firstChild) {
+//           menu.removeChild(menu.firstChild);
+//       }
+//    </script>
+// </body>
+// </html>
+
+
+// JavaScript DocumentFragment
+
+
+// The DocumentFragment interface is a lightweight version of the Document that stores a piece of document structure like a standard document. However, a DocumentFragment isn’t part of the active DOM tree.
+
+// If you make changes to the document fragment, it doesn’t affect the document or incurs any performance.
+
+// Typically, you use the DocumentFragment to compose DOM nodes and append or insert it to the active DOM tree using appendChild()
+
+
+
+// let fragment = new DocumentFragment();
+
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//    <meta charset="UTF-8">
+//    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//    <title>DocumentFragment Demo</title>
+// </head>
+// <body>
+//    <ul id="language"></ul>
+
+//    <script>
+//        let languages = ['JS', 'TypeScript', 'Elm', 'Dart', 'Scala'];
+
+//        let langEl = document.querySelector('#language');
+//        let fragment = new DocumentFragment();
+
+//        languages.forEach((language) => {
+//            let li = document.createElement('li');
+//            li.innerHTML = language;
+//            fragment.appendChild(li);
+//        })
+
+//        langEl.appendChild(fragment);
+//    </script>
+
+// </body>
+// </html>
+
+// Use the DocumentFragment to compose DOM nodes before updating them to the active DOM tree to get better performance.
 
       
 
