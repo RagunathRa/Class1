@@ -1381,7 +1381,7 @@ for (let i = 0; i < paragraphs.length; i++) {
 
 // MANIPULATING ELEMENTS
 
-// 1.JavaScript CreateElement
+//                                                  1.JavaScript CreateElement
 
 // The document.createElement() accepts an HTML tag name and returns a new Node with the Element type.
 
@@ -1448,7 +1448,7 @@ for (let i = 0; i < paragraphs.length; i++) {
 //        menu.removeChild(menu.lastElementChild);
 //    </script>
 // </body>
-// </html>
+// </html>  
 
 // ex-2
 
@@ -1502,9 +1502,9 @@ for (let i = 0; i < paragraphs.length; i++) {
 //        let fragment = new DocumentFragment();
 
 //        languages.forEach((language) => {
-//            let li = document.createElement('li');
-//            li.innerHTML = language;
-//            fragment.appendChild(li);
+//            let car = document.createElement('li');
+//            car.innerHTML = language;
+//            fragment.appendChild(car);
 //        })
 
 //        langEl.appendChild(fragment);
@@ -1515,20 +1515,161 @@ for (let i = 0; i < paragraphs.length; i++) {
 
 // Use the DocumentFragment to compose DOM nodes before updating them to the active DOM tree to get better performance.
 
+
+
+
+
       
+                                                  JavaScript Style
+
+        
+
+
+    CSS                               JavaScript
+    background	                     background
+      background-attachment	           backgroundAttachment
+    background-color	               backgroundColor
+background-image                 backgroundImage
+
+
+          Getting the Width and Height of an Element
+       <!DOCTYPE html>
+                                                  <html lang="ven">
+                                                  
+                                                  <head>
+                                                      <meta charset="UTF-8">
+                                                      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                                      <title>Getting the Width and Height of an Element</title>
+                                                  </head>
+                                                  
+                                                  <body>
+                                                      <div class="box" style="width:100px;height:150px;border:solid 1px #000;padding:10px"></div>
+                                                      <script>
+                                                          // let box = document.querySelector('.box');
+                                                          // let width = box.offsetWidth;
+                                                          // let height = box.offsetHeight;
+                                                          // console.log({ width, height });
+                                                          let box = document.querySelector('.box');
+let { width, height } = box.getBoundingClientRect();
+console.log({ width, height });
+
+                                                      </script>
+                                                  </body>
+                                                  
+                                                  </html>
 
 
 
 
+                                                  JavaScript Events
+
+
+
+ An event is an action that occurs in the web browser, which the web browser feedbacks to you so that you can respond to it.  
+ 
+ Each event may have an event handler which is a block of code that will execute when the event occurs.
+
+
+ To define the code that will be executed when the button is clicked, you need to register an event handler using the addEventListener() method:
 
 
 
 
+ <button id="btn">Click Me!</button>
+
+ let btn = document.querySelector('#btn');
+
+function display() {
+    alert('It was clicked!');
+}
+
+btn.addEventListener('click',display);
 
 
+
+
+                                               Event bubbling
+
+In the event bubbling model, an event starts at the most specific element and then flows upward toward the least specific element (the document or even window).
+
+When you click the button, the click event occurs in the following order:
+
+button
+div with the id container
+body
+html
+document
+
+The click event first occurs on the button which is the element that was clicked. Then the click event goes up the DOM tree, firing on each node along its way until it reaches the document object.
+
+
+                                               Event capturing
+
+In the event capturing model, an event starts at the least specific element and flows downward toward the most specific element.
+
+When you click the button, the click event occurs in the following order:
+
+document
+html
+body
+div with the id container
+button
+
+                                           
+
+  
+
+            <script>
+                   function showAlert() {
+                                                                    alert('Clicked!');
+                                                                }
+                                                            </script>
+                                                            <input type="button" value="Save" onclick="showAlert()">       
+
+
+  DOM Level 2 event handlers
+
+
+
+        DOM Level 2 Event Handlers provide two main methods for dealing with the registering/deregistering event listeners:
+
+                                                            addEventListener() – register an event handler
+                                                            removeEventListener() – remove an event handler                                          
 
 
 
 
   
 
+                                                            The addEventListener() method
+
+The addEventListener() method is a built-in JavaScript method that allows you to attach an event listener to a specified element, such as an HTML element like a button or a document object. It enables you to respond to specific events that occur on that element, such as a mouse click, a key press, or a form submission.
+
+
+                            syntax ==            element.addEventListener(event, function, useCapture);
+
+ <!DOCTYPE html>
+                                                            <html>
+                                                            <head>
+                                                              <title>Event Handling Example</title>
+                                                            </head>
+                                                            <body>
+                                                            
+                                                              <button id="myButton">Click Me!</button>
+                                                            
+                                                              <script>
+                                                               
+                                                                const button = document.getElementById('myButton');
+                                                            
+                                                              
+                                                                function handleClick() {
+                                                                  alert('Button clicked!');
+                                                                }
+                                                            
+                                                                // Attach the event handler function to the button's click event
+                                                                button.addEventListener('click', handleClick);
+                                                              </script>
+                                                            
+                                                            </body>
+                                                            </html>
+                                                                                                               
