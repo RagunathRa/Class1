@@ -1672,4 +1672,274 @@ The addEventListener() method is a built-in JavaScript method that allows you to
                                                             
                                                             </body>
                                                             </html>
-                                                                                                               
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROOJECT</title>
+    <link rel="stylesheet" href="../css/project1.css">
+</head>
+<body>
+ <!-- <div id="d1">
+     <h1> Welcome To The Beach</h1>
+  <p id="p1"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, ratione?</p>
+  <p id="bo">Read more</p>
+</div>   
+ <div id="d2">
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo accusantium commodi debitis architecto reprehenderit atque fugit earum optio odit quis ratione alias, natus assumenda? Aliquid praesentium asperiores natus. Deserunt dolorum voluptatum consequuntur voluptates nesciunt velit laudantium, odio harum dicta ad labore nulla quibusdam praesentium reiciendis? Quia perferendis magnam voluptate assumenda ipsam praesentium quasi ipsa ab laborum architecto officia incidunt modi ut non, perspiciatis hic enim quaerat ducimus quibusdam tenetur harum ipsum qui consequatur corporis? Voluptates.
+ </div>
+ <div id="d3">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, neque voluptatibus distinctio nostrum necessitatibus quibusdam asperiores labore minus a, suscipit officiis. Ipsum accusamus quisquam repudiandae, dignissimos, sequi a alias ducimus corrupti dolore quidem eum libero iste commodi. Deleniti quia quasi numquam quibusdam neque accusantium. Iure laudantium obcaecati aliquid dolore eligendi, delectus sed quia esse. Esse sapiente ducimus consequuntur laboriosam, ad non, officiis quod mollitia veniam reiciendis assumenda labore? Dolores eveniet nulla iste repellendus debitis harum.
+ </div>
+ <div id="d4">
+    <p id="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dolorum est, molestias dolores quis sunt
+        nobis temporibus veritatis libero odio!</p>
+    <p  id="p3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dolorum est, molestias dolores quis sunt
+        nobis temporibus veritatis libero odio!</p>
+    <p id="p4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dolorum est, molestias dolores quis sunt
+        nobis temporibus veritatis libero odio!</p>
+ </div> -->
+
+ <!-- <!DOCTYPE html>
+ <html>
+ <head>
+   <title>Form Example</title>
+ </head>
+ <body>
+   <form id="myForm">
+     <label for="name">Name:</label>
+     <input type="text" id="name" name="name" required><br><br>
+ 
+     <label for="email">Email:</label>
+     <input type="email" id="email" name="email" required><br><br>
+ 
+     <label for="message">Message:</label>
+     <textarea id="message" name="message" rows="4" cols="30" required></textarea><br><br>
+ 
+     <input type="submit" value="Submit">
+   </form>
+ 
+   <script >
+    const form = document.getElementById("myForm");
+    
+    
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); 
+    
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+    
+      console.log("Name:", name);
+      console.log("Email:", email);
+      console.log("Message:", message);
+    
+    });
+    </script>
+ </body>
+ </html> -->
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Form Example</title>
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>Complex Form Example</title>
+</head>
+<body>
+  <form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select><br><br>
+
+    <label for="newsletter">Subscribe to Newsletter:</label>
+    <input type="checkbox" id="newsletter" name="newsletter"><br><br>
+
+    <label for="interests">Interests:</label><br>
+    <input type="checkbox" id="interest1" name="interest" value="programming">
+    <label for="interest1">Programming</label><br>
+    <input type="checkbox" id="interest2" name="interest" value="design">
+    <label for="interest2">Design</label><br>
+    <input type="checkbox" id="interest3" name="interest" value="gaming">
+    <label for="interest3">Gaming</label><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script >
+  const form1 = document.getElementById("myForm");
+
+    form1.addEventListener("submit", function(event) {
+      event.preventDefault();
+    
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+      const gender = document.getElementById("gender").value;
+      const newsletter = document.getElementById("newsletter").checked;
+    
+      
+      const interests = [];
+      const interestCheckboxes = document.getElementsByName("interest");
+      for (let i = 0; i < interestCheckboxes.length; i++) {
+        if (interestCheckboxes[i].checked) {
+          interests.push(interestCheckboxes[i].value);
+        }
+      }
+    
+      // Perform validation
+
+
+
+      console.log("Name:", name);
+      console.log("Email:", email);
+      console.log("Password:", password);
+      console.log("Confirm Password:", confirmPassword);
+      console.log("Gender:", gender);
+      console.log("Subscribe to Newsletter:", newsletter);
+      console.log("Interests:", interests);
+    
+      // You can perform further actions with the form data, such as sending it to a server
+    });
+    </script>
+</body>
+</html>
+ --> -->
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+   <title>Basic Form Example</title>
+   <style>
+     .error {
+       color: red;
+     }
+   </style>
+ </head>
+ <body>
+   <h1>Registration Form</h1>
+ 
+   <form id="registrationForm">
+     <label for="name">Name:</label>
+     <input type="text" id="name" name="name" required><br>
+     <span id="nameError" class="error"></span><br><br>
+ 
+     <label for="email">Email:</label>
+     <input type="email" id="email" name="email" required><br>
+     <span id="emailError" class="error"></span><br><br>
+ 
+     <label for="password">Password:</label>
+     <input type="password" id="password" name="password" required><br>
+     <span id="passwordError" class="error"></span><br><br>
+ 
+     <input type="submit" value="Submit">
+   </form>
+ 
+   <script>const form = document.getElementById("registrationForm");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+    
+      const nameInput = document.getElementById("name");
+      const emailInput = document.getElementById("email");
+      const passwordInput = document.getElementById("password");
+    
+      const nameError = document.getElementById("nameError");
+      const emailError = document.getElementById("emailError");
+      const passwordError = document.getElementById("passwordError");
+    
+      // Clear previous error messages
+      nameError.textContent = "";
+      emailError.textContent = "";
+      passwordError.textContent = "";
+    
+      // Validate name
+      if (nameInput.value.trim() === "") {
+        nameError.textContent = "Name is required";
+        nameInput.focus();
+        return;
+      }
+    
+      // Validate email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(emailInput.value)) {
+        emailError.textContent = "Invalid email address";
+        emailInput.focus();
+        return;
+      }
+    
+      // Validate password
+      if (passwordInput.value.length < 6) {
+        passwordError.textContent = "Password must be at least 6 characters";
+        passwordInput.focus();
+        return;
+      }
+    
+      // Form is valid, perform further actions
+      alert("Registration successful!");
+      form.reset();
+    });
+    </script>
+ </body>
+ </html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
