@@ -1932,7 +1932,71 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo accusantium commod
  </html>
 
 
+                     js events
 
+  1.click Event
+
+  const element = document.getElementById("myElement");
+
+element.addEventListener("click", function() {
+  // Perform CSS manipulations here
+  element.style.color = "red";
+});
+
+  2.mouseenter and mouseleave Events:
+  The mouseenter event is triggered when the mouse 
+  pointer enters an element, 
+  similar to mouseover. 
+  However, the mouseenter event does not bubble up 
+  like mouseover,
+  which can be useful in certain scenarios. 
+  The mouseleave event is triggered when the mouse pointer leaves the element
+
+  const element = document.getElementById("myElement");
+
+element.addEventListener("mouseenter", function() {
+  // Perform CSS manipulations here
+  element.style.backgroundColor = "yellow";
+});
+
+element.addEventListener("mouseleave", function() {
+  // Perform CSS manipulations here
+  element.style.backgroundColor = "";
+});
+
+  3.keydown and keyup Events:
+
+  The keydown event is triggered when a key is pressed down, and the keyup event is triggered when a key is released
+  const input = document.getElementById("myInput");
+
+input.addEventListener("keydown", function() {
+  // Perform CSS manipulations here
+  input.style.borderColor = "blue";
+});
+
+input.addEventListener("keyup", function() {
+  // Perform CSS manipulations here
+  input.style.borderColor = "";
+});
+
+  4.scroll Event:
+The scroll event is triggered when the user scrolls within an element.
+  It can be used to create dynamic scrolling effects or change styles based on the scroll position.
+
+  const container = document.getElementById("myContainer");
+
+container.addEventListener("scroll", function() {
+  // Perform CSS manipulations here based on scroll position
+  if (container.scrollTop > 100) {
+    container.style.backgroundColor = "lightgray";
+  } else {
+    container.style.backgroundColor = "";
+  }
+});
+
+
+
+  
 
 
 
