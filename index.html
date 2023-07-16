@@ -2044,7 +2044,115 @@ console.log(results);
                                      
 
 
-                                                                Js
+                                                            
+
+                                                     <!-- JavaScript  Closure 
+  
+A closure can be defined as a JavaScript feature in which the inner function has access to the outer function variable.
+ In JavaScript, every time a closure is created with the creation of a function.
+
+
+Lexical scoping
+
+
+
+<button id="demo" onclick="init()">
+Click
+</button> -->
+<script>
+
+
+
+// function init() {
+//   var name = "zilla1"; 
+//   function displayName() { 
+// console.log(name);   
+ 
+
+//   }
+//   displayName();
+// }
+
+
+
+
+
+
+// What's different (and interesting) is that the displayName() inner function is returned from the outer function before being executed.
+1.
+// function makeFunc() {
+//   const name = "zilla";
+//   function displayName() {
+//     console.log(name);
+//   }
+//   return displayName;
+// }
+
+// const myFunc = makeFunc();
+// myFunc();
+
+
+// 2.
+
+// function makeAdder(x) {
+//   return function (y) {
+//     return x + y;
+//   };
+// }
+
+// const add5 = makeAdder(5);
+// const add10 = makeAdder(10);
+
+// console.log(add5(2)); // 7
+// console.log(add10(2)); // 12
+//  -->
+
+
+
+
+                   1.   JSON - Introduction
+
+=> JSON stands for JavaScript Object Notation
+
+=> JSON is a text format for storing and transporting data
+
+=> JSON is "self-describing" and easy to understand
+=> JSON is language independent *
+
+2.JSON Example
+
+
+'{"name":"John", "age":30, "car":null}'
+
+
+3. access the data as an object
+let personName = obj.name;
+
+4.Why Use JSON?
+The JSON format is syntactically similar to the code
+  for creating JavaScript objects. Because of this
+, a JavaScript program can easily convert JSON data into JavaScript objects.
+
+Since the format is text only
+
+5.JavaScript also has a built in function for converting an object into a JSON string:
+
+JSON.stringify()
+6.JavaScript has a built in function for converting JSON strings into JavaScript objects:
+
+JSON.parse()
+
+7.Storing Data => JSON makes it possible to store JavaScript objects as text
+
+8.In JSON, keys must be strings, written with double quotes
+JSON
+{"name":"John"}
+In JavaScript, keys can be strings, numbers, or identifier names:
+
+JavaScript
+{name:"John"}
+  
+
 
 
 
