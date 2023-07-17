@@ -2199,18 +2199,64 @@ var data = JSON.parse(j);
   
 document.write("Convert string in JSON format using parse() method<br>"); 
   
-document.write(data.Email); //expected output: XYZ  
+document.write(data.Email); //expected output: XYZ
 
 
 
 
 
+Convert a JavaScript object into a string with JSON.stringify().
 
+<!DOCTYPE html>
+<html>
+<body>
 
+<h2>Create a JSON string from a JavaScript array.</h2>
+<p id="demo"></p>
 
+<script>
+const arr = ["John", "Peter", "Sally", "Jane"];
+const myJSON = JSON.stringify(arr);
+document.getElementById("demo").innerHTML = myJSON;
+</script>
 
+</body>
+</html>
 
-
-
+JSON Object Literals
 
   
+'{"name":"John", "age":30, "car":null}
+  
+  JSON Example
+{"employees":[
+  { "firstName":"John", "lastName":"Doe" },
+  { "firstName":"Anna", "lastName":"Smith" },
+  { "firstName":"Peter", "lastName":"Jones" }
+]}
+
+  Xml examples 
+<employees>
+  <employee>
+    <firstName>John</firstName> <lastName>Doe</lastName>
+  </employee>
+  <employee>
+    <firstName>Anna</firstName> <lastName>Smith</lastName>
+  </employee>
+  <employee>
+    <firstName>Peter</firstName> <lastName>Jones</lastName>
+  </employee>
+</employees>
+
+Why JSON is Better Than XML
+  
+XML is much more difficult to parse than JSON.
+JSON is parsed into a ready-to-use JavaScript object.
+
+
+
+
+
+
+
+      
