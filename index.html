@@ -2154,6 +2154,53 @@ JavaScript
   
 
 
+9.JSON Arrays
+
+
+Just like in JavaScript, an array can contain objects:
+
+"employees":[
+  {"firstName":"John", "lastName":"Doe"},
+  {"firstName":"Anna", "lastName":"Smith"},
+  {"firstName":"Peter", "lastName":"Jones"}
+]
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Create Object from JSON String</h2>
+
+<p id="demo"></p>
+
+<script>
+const jsonString = '{"employees": [ 
+  {"firstName": "John", "lastName": "Doe" }, 
+  {"firstName": "Anna", "lastName": "Smith" },
+  {"firstName": "Peter", "lastName": "Jones" }
+]}';
+
+const obj = JSON.parse(jsonString);
+document.getElementById("demo").innerHTML =
+  obj.employees[1].firstName + " " + obj.employees[1].lastName;
+</script>
+
+</body>
+</html>
+
+
+//JavaScript to illustrate JSON.parse() method.  
+
+  
+var j = '{"Name":"Krishna","Email": "XYZ", "CN": "12345"}'; 
+  
+var data = JSON.parse(j);  
+  
+document.write("Convert string in JSON format using parse() method<br>"); 
+  
+document.write(data.Email); //expected output: XYZ  
+
 
 
 
