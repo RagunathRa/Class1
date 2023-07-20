@@ -2253,10 +2253,77 @@ Why JSON is Better Than XML
 XML is much more difficult to parse than JSON.
 JSON is parsed into a ready-to-use JavaScript object.
 
+                                                         API with JavaScript                   
+                                          
+         API (Application Programming Interface) can be considered as a set of rules that are shared by a particular service.
+  These rules determine in which format and with which command set your application can access the service,
+  as well as what data this service can return in a response. API acts as a layer between your application and external service.
+
+                                                HTTP Requests
+            HTTP, Hypertext Transfer Protocol, is the protocol that is used to send HTML pages just like the one that you are 
+  looking at right now over the internet.
+HTTP requests can also be made to fetch files such as images and videos, as well as data from a API.
+
+     HTTP Request Consists of Many Parts
+ 
+1. Method: Indicates what action you want to execute towards the server that you are making the request to.
+  The valid methods are: An HTTP Request consists of five parts. REST API in JavaScript.
+
+GET for getting data from the server
+POST for creating data on the server
+PUT for updating data on the server
+PATCH for partially updating data on the server
+DELETE for deleting data on the server
+
+2. URL: The URL that you want to access the server.
+    the URL consists of the following parts: protocol, host and path.
+  Let’s take a look at the URL http://example.com/about and split it into these parts.
+
+3. Body: The data that you want to send to the server. Usually consists of a JSON formatted string.
+
+4. Headers: Extra data for the request such as access tokens and information about your browser.
+  
+ Example GET Request
+
+Method	URL                             	Body	Headers
+GET	   http://example.com?page=1&tab=2	
 
 
+GET is the method used to make the request.GET requests can’t have a body so that is empty.
 
 
+The page which is equal to 1, this could be used by the server to display the correct page on example.com. the tab which is equal to 2, 
+  this could be used by the server to display text inside a specific tab on the page.
+
+POST Request
+
+    Method                               	URL                 	Body	                                                      
+POST                                	http://example.com/   posts	{                                                      
+
+                                                                  “message”: “Hello
+                                                                  World!”
+                                                                    }
 
 
-      
+ Headers
+User-Agent
+Mozilla/5.0
+(Macintosh; Intel
+Mac OS X x.y;
+rv:42.0)
+Gecko/20100101
+Firefox/42.0
+
+output:
+{
+"message": "Hello World!"
+}
+                   JavaScript Fetch Library
+
+fetch('http://example.com');
+The easiest way to call a REST API in JavaScript is to use the fetch 
+It is built into the standard JavaScript library and can be used to make all sorts of HTTP calls.
+
+Since the default method in fetch is GET we don't need to specify it in the function call
+
+
