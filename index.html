@@ -119,6 +119,34 @@ console.log(person2.age); // Output: 30
 console.log(person1.occupation); // Output: Engineer
 </script> -->
 
+// this keyword 
+
+
+// Global context
+console.log(this); // In a browser, this will be the window object
+
+function regularFunction() {
+  console.log(this); // In a browser, this will be the window object (or undefined in strict mode)
+}
+regularFunction();
+
+const obj = {
+  name: 'John',
+  sayHello: function() {
+    console.log(this.name);
+  }
+};
+
+obj.sayHello(); // This will print "John"
+
+const arrowFunction = () => {
+  console.log(this); // In this context, the value of this is determined by the surrounding context.
+};
+arrowFunction(); // The value of this will depend on where arrowFunction is defined and how it is called.
+
+
+It's important to note that this is dynamically determined at runtime,
+so its value may change depending on how and where the function is invoked.
 
 <!-- <title>Checkbox Value Change</title>
 </head>
