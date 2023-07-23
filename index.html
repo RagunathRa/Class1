@@ -2520,3 +2520,236 @@ It is built into the standard JavaScript library and can be used to make all sor
 Since the default method in fetch is GET we don't need to specify it in the function call
 
 
+
+                                                          JavaScript FormData
+
+
+
+
+<form id="subscription">
+    <h1>Subscribe</h1>
+    <div id="message"></div>
+    <div class="field">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your fullname" required />
+        <small></small>
+    </div>
+    <div class="field">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="Enter your email address" required />
+        <small></small>
+    </div>
+    <div class="field">
+        <button type="submit" class="full" id="submit">Subscribe</button>
+    </div>
+</form>
+<script>
+const btn = document.querySelector('#submit');
+const form = document.querySelector('#subscription');
+const messageEl = document.querySelector('#message');
+
+btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    subscribe();
+});
+
+const subscribe = async () => {
+    try {
+        let response = await fetch('subscribe.php', {
+        method: 'POST',
+        body: new FormData(form),
+        });
+        const result = await response.json();
+
+        showMessage(result.message, response.status == 200 ? 'success' : 'error');
+    } catch (error) {
+        showMessage(error.message, 'error');
+    }
+};
+
+const showMessage = (message, type = 'success') => {
+    messageEl.innerHTML = `
+        <div class="alert alert-${type}">
+        ${message}
+        </div>
+    `;
+};
+
+
+<script>
+
+the FormData interface allows you to construct a set of key/value pairs representing form fields and their values in JavaScript.
+
+Once having a FormData object, you can post it to the server using the fetch API. 
+  If you want to submit the form as if it were like the GET request, 
+  you can pass the FormData object to the URLSearchParams constructor.
+
+
+
+Finally:
+Use the JavaScript FormData API to capture the HTML form values.
+Use the Fetch API to submit the FormData to the server.
+
+
+
+JavaScript Geolocation
+
+
+
+What is Geolocation API
+The Geolocation API allows the web application to access your location if you agree to share it.
+
+Why Geolocation API
+The Geolocation API is useful for web applications that need to work based on the user’s locations such as Search Engines,
+  eCommerce websites, maps, and weather apps.
+
+The Geolocation API is available through the navigator.geolocation object.
+
+
+Get the current position
+To get the user’s current location, you call the getCurrentPosition() method of the navigator.geolocation object.
+
+The getCurrentPosition() method sends an asynchronous request to detect the user’s location and queries the positioning hardware (like GPS)
+  to get the up-to-date data.
+
+The getCurrentPosition() can succeed or fail. It accepts two optional callbacks that will execute in each case respectively.
+
+If the getCurrentPosition() succeeds, you’ll get the user’s position as an GeolocationCoordinates object.
+
+The GeolocationCoordinates object has the latitude and longitude properties that represent a location.
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Geolocation Demo</title>
+   
+</head>
+<body>
+    <div class="container">
+        <button id="show" class="btn">Show my location</button>
+        <div id="message"></div>
+    </div>
+    <script >
+      (() => {
+    const message = document.querySelector('#message');
+
+    // check if the Geolocation API is supported
+    if (!navigator.geolocation) {
+        message.textContent = `Your browser doesn't support Geolocation`;
+        message.classList.add('error');
+        return;
+    }
+
+    // handle click event
+    const btn = document.querySelector('#show');
+    btn.addEventListener('click', function () {
+        // get the current position
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    });
+
+
+    // handle success case
+    function onSuccess(position) {
+        const {
+            latitude,
+            longitude
+        } = position.coords;
+
+        message.classList.add('success');
+        message.textContent = `Your location: (${latitude},${longitude})`;
+    }
+
+    // handle error case
+    function onError() {
+        message.classList.add('error');
+        message.textContent = `Failed to get your location!`;
+    }
+})();
+    </script>
+</body>
+</html> -->   
+
+ex-2
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Geolocation Demo</title>
+    <style>
+        .error {
+            color: red;
+        }
+
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button id="show" class="btn">Show my location</button>
+        <div id="message"></div>
+    </div>
+    <script>
+        (() => {
+            const message = document.querySelector('#message');
+
+            // check if the Geolocation API is supported
+            if (!navigator.geolocation) {
+                message.textContent = `Your browser doesn't support Geolocation`;
+                message.classList.add('error');
+                return;
+            }
+
+            // handle click event
+            const btn = document.querySelector('#show');
+            btn.addEventListener('click', function () {
+                // get the current position
+                navigator.geolocation.getCurrentPosition(onSuccess, onError);
+            });
+
+            // handle success case
+            function onSuccess(position) {
+                const {
+                   latitude,
+                    longitude
+                   } = position.coords;
+                   
+                  
+               
+
+                message.classList.add('success');
+                message.textContent = `Your location: (${latitude}, ${longitude})`;
+
+               
+                openGoogleMaps(latitude, longitude);
+            }
+
+            // handle error case
+            function onError() {
+                message.classList.add('error');
+                message.textContent = `Failed to get your location!`;
+            }
+
+           
+            function openGoogleMaps(latitude, longitude) {
+                const url = `https://www.google.com/maps?q=${latitude},${longitude}`;
+                window.open(url, '_blank');
+            }
+        })();
+    </script>
+</body>
+
+</html>
+
+
+The Geolocation API allows web applications to access the user’s current position.
+Use the navigator.geolocation.getCurrentPosition() method to get the current user’s location.
