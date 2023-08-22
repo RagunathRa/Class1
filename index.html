@@ -2753,3 +2753,128 @@ ex-2
 
 The Geolocation API allows web applications to access the user’s current position.
 Use the navigator.geolocation.getCurrentPosition() method to get the current user’s location.
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+// const Arr =[1, 2, 3, 2,5,3,4,7, 8, 7,7 ];
+
+// let UpFind = Arr.filter((item, index) => Arr.indexOf (item)
+// !== index )
+
+// let Guru = UpFind.length
+//  const Person ={
+//     ni:[],
+//     name:'hi',
+//     age:3,
+//     my:9,
+//     you:'helo',
+   
+//  }
+
+//  console.log(Guru);
+
+
+
+//  var Ragu = Arr.map((item) => {
+ 
+//  if(item %2 == 0){
+// console.log("new", item);
+//  }else{
+//        console.log("Up", item);
+//  }
+// })
+// console.log("R",Ragu);
+
+// //  if(Guru %2 == 0 ){
+// //     console.log(`even = ${UpFind}`);
+// //  } else {
+// //     console.log('odd');
+// //  }
+// let {  name , ...ni} = Person
+
+// console.log(ni);
+
+// // const d0upNum = findNum()
+// // 1,0
+// // 2,1
+// // 3,2
+// // 2,4
+
+
+// // console.log(findNum);
+// // console.log(UpFind);
+// // let sii = Arr.indexOf(7)
+// // let sii2 = Arr.indexOf(7)
+
+// // console.log(sii);
+// // console.log(sii2);
+
+
+// var rt = [];
+// var yt = [4,6];
+// let Rado = [...rt, ...yt]
+// console.log(Rado);
+
+
+// const Arr = ['john', 'ram', 'ragu', 'john', 'sam','ragu'];
+
+// let Arr2 = Arr.filter((item, index) => Arr.indexOf(item) !== index )
+
+// console.log(Arr2);
+// const Arr = ['john', 'ram', 'ragu', 'ragu','john','john', 'sam', 'er', 'ragu'];
+
+// let Arr3 = Arr.filter((item, index) => Arr.indexOf(item) !== index);
+// let Arr2 = Arr.filter((item) => Arr.indexOf(item) !== Arr.lastIndexOf(item));
+// const Arr4 = [1, 2, 3, 2, 5, 3, 4, 7, 8, 7, 7];
+// // let jii = Math.max(...Arr4);
+// // console.log(jii);
+
+// let jii = 3;
+// let ki = Arr4.filter(item => item !== jii);
+// console.log(ki);
+
+// console.log(Arr2);
+// console.log(Arr3);
+
+const Arr = ['a', 'b','e','t', 'c', 'b', 'g', 'g', 'a', 'f', 'b', 'e', 'a'];
+
+let Arr2 = Arr.filter((item) => Arr.indexOf(item) !== Arr.lastIndexOf(item));
+
+let duplicateLengths = {};
+
+for (let item of Arr2) {
+  if (duplicateLengths[item]) {
+    // duplicateLengths[item]++ 
+    if(duplicateLengths[item]++ %2==0){
+        // duplicateLengths[item]++
+        console.log(`${item} (Count: ${duplicateLengths[item]})`);
+    }
+  } else {
+    duplicateLengths[item] = 1;
+  }
+}
+console.log(Arr2);
+console.log(duplicateLengths);
+
+
+
+        </script>
+</body>
+</html>
